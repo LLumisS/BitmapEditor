@@ -12,20 +12,29 @@ namespace PictureEditor
 {
     public partial class Form1 : Form
     {
+        FileManip fileManip = new FileManip();
+
         public Form1()
         {
             InitializeComponent();
         }
 
-        private void openToolStripMenuItem_Click(object sender, EventArgs e)
+        private void OpenButton(object sender, EventArgs e)
         {
-            if (openFileDialog.ShowDialog() == DialogResult.OK)
-            {
-                pictureBox1.Image = new Bitmap(openFileDialog.FileName);
-            }
+            fileManip.OnOpen(openFileDialog, pictureBox1);
         }
 
-        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        private void SaveButton(object sender, EventArgs e)
+        {
+            fileManip.OnSave();
+        }
+
+        private void SaveAsButton(object sender, EventArgs e)
+        {
+            fileManip.OnSaveAs();
+        }
+
+        private void ExitButton(object sender, EventArgs e)
         {
             this.Close();
         }
