@@ -160,33 +160,36 @@
             // 
             // lightningTool
             // 
+            this.lightningTool.CheckOnClick = true;
             this.lightningTool.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.lightningTool.Image = ((System.Drawing.Image)(resources.GetObject("lightningTool.Image")));
             this.lightningTool.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.lightningTool.Name = "lightningTool";
             this.lightningTool.Size = new System.Drawing.Size(23, 22);
             this.lightningTool.Text = "toolStripButton1";
-            this.lightningTool.Click += new System.EventHandler(this.OnLightningTool);
+            this.lightningTool.Click += new System.EventHandler(this.LightningToolButton);
             // 
             // contrastTool
             // 
+            this.contrastTool.CheckOnClick = true;
             this.contrastTool.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.contrastTool.Image = ((System.Drawing.Image)(resources.GetObject("contrastTool.Image")));
             this.contrastTool.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.contrastTool.Name = "contrastTool";
             this.contrastTool.Size = new System.Drawing.Size(23, 22);
             this.contrastTool.Text = "toolStripButton2";
-            this.contrastTool.Click += new System.EventHandler(this.OnContrastTool);
+            this.contrastTool.Click += new System.EventHandler(this.ContrastToolButton);
             // 
             // rgbTool
             // 
+            this.rgbTool.CheckOnClick = true;
             this.rgbTool.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.rgbTool.Image = ((System.Drawing.Image)(resources.GetObject("rgbTool.Image")));
             this.rgbTool.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.rgbTool.Name = "rgbTool";
             this.rgbTool.Size = new System.Drawing.Size(23, 22);
             this.rgbTool.Text = "toolStripButton3";
-            this.rgbTool.Click += new System.EventHandler(this.OnRgbTool);
+            this.rgbTool.Click += new System.EventHandler(this.RgbToolButton);
             // 
             // Form1
             // 

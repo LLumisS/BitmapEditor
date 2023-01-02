@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -14,6 +15,7 @@ namespace PictureEditor
     {
         FileManip fileManip = new FileManip();
         Editor editor = new Editor();
+        ToolStripButton previous;
 
         public Form1()
         {
@@ -35,24 +37,31 @@ namespace PictureEditor
             fileManip.OnSaveAs();
         }
 
-        private void OnLightningTool(object sender, EventArgs e)
+        private void LightningToolButton(object sender, EventArgs e)
         {
             editor.OnLightning();
+            if (previous != null) previous.Checked = false;
+            previous = lightningTool;
         }
 
-        private void OnContrastTool(object sender, EventArgs e)
+        private void ContrastToolButton(object sender, EventArgs e)
         {
             editor.OnContrast();
+            if (previous != null) previous.Checked = false;
+            previous = contrastTool;
         }
 
-        private void OnRgbTool(object sender, EventArgs e)
+        private void RgbToolButton(object sender, EventArgs e)
         {
             editor.OnRGB();
+            if (previous != null) previous.Checked = false;
+            previous = rgbTool;
         }
 
         private void ExitButton(object sender, EventArgs e)
         {
             this.Close();
         }
+
     }
 }
