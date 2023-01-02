@@ -13,6 +13,7 @@ namespace PictureEditor
     public partial class Form1 : Form
     {
         FileManip fileManip = new FileManip();
+        Editor editor = new Editor();
 
         public Form1()
         {
@@ -32,6 +33,21 @@ namespace PictureEditor
         private void SaveAsButton(object sender, EventArgs e)
         {
             fileManip.OnSaveAs();
+        }
+
+        private void OnLightningTool(object sender, EventArgs e)
+        {
+            editor.OnLightning();
+        }
+
+        private void OnContrastTool(object sender, EventArgs e)
+        {
+            editor.OnContrast();
+        }
+
+        private void OnRgbTool(object sender, EventArgs e)
+        {
+            editor.OnRGB();
         }
 
         private void ExitButton(object sender, EventArgs e)

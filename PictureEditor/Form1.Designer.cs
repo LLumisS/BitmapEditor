@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.trackBar1 = new System.Windows.Forms.TrackBar();
@@ -38,6 +39,10 @@
             this.saveAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.lightningTool = new System.Windows.Forms.ToolStripButton();
+            this.contrastTool = new System.Windows.Forms.ToolStripButton();
+            this.rgbTool = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -45,6 +50,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -140,11 +146,54 @@
             // 
             this.openFileDialog.Filter = "Images|*.bmp;*.png;*.jpg";
             // 
+            // toolStrip1
+            // 
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.lightningTool,
+            this.contrastTool,
+            this.rgbTool});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 24);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(800, 25);
+            this.toolStrip1.TabIndex = 2;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // lightningTool
+            // 
+            this.lightningTool.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.lightningTool.Image = ((System.Drawing.Image)(resources.GetObject("lightningTool.Image")));
+            this.lightningTool.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.lightningTool.Name = "lightningTool";
+            this.lightningTool.Size = new System.Drawing.Size(23, 22);
+            this.lightningTool.Text = "toolStripButton1";
+            this.lightningTool.Click += new System.EventHandler(this.OnLightningTool);
+            // 
+            // contrastTool
+            // 
+            this.contrastTool.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.contrastTool.Image = ((System.Drawing.Image)(resources.GetObject("contrastTool.Image")));
+            this.contrastTool.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.contrastTool.Name = "contrastTool";
+            this.contrastTool.Size = new System.Drawing.Size(23, 22);
+            this.contrastTool.Text = "toolStripButton2";
+            this.contrastTool.Click += new System.EventHandler(this.OnContrastTool);
+            // 
+            // rgbTool
+            // 
+            this.rgbTool.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.rgbTool.Image = ((System.Drawing.Image)(resources.GetObject("rgbTool.Image")));
+            this.rgbTool.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.rgbTool.Name = "rgbTool";
+            this.rgbTool.Size = new System.Drawing.Size(23, 22);
+            this.rgbTool.Text = "toolStripButton3";
+            this.rgbTool.Click += new System.EventHandler(this.OnRgbTool);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -159,6 +208,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -176,6 +227,10 @@
         private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem saveAsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripButton lightningTool;
+        private System.Windows.Forms.ToolStripButton contrastTool;
+        private System.Windows.Forms.ToolStripButton rgbTool;
     }
 }
 
