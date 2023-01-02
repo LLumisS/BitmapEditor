@@ -21,7 +21,7 @@ namespace PictureEditor
         {
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
-
+                pictureBox1.Image = new Bitmap(openFileDialog.FileName);
             }
         }
 
