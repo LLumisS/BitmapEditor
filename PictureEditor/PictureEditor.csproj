@@ -46,8 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ToolBar.cs" />
-    <Compile Include="FileManip.cs" />
+    <Compile Include="Classes\ToolBar.cs" />
+    <Compile Include="Classes\FileManip.cs" />
     <Compile Include="Form.cs">
       <SubType>Form</SubType>
     </Compile>
