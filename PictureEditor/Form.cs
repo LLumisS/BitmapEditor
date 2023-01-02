@@ -38,22 +38,22 @@ namespace PictureEditor
 
         private void LightningToolButton(object sender, EventArgs e)
         {
-            toolBar.OnLightning(lightningTool);
+            toolBar.OnLightning(lightningTool, pictureBox1);
         }
 
         private void ContrastToolButton(object sender, EventArgs e)
         {
-            toolBar.OnContrast(contrastTool);
+            toolBar.OnContrast(contrastTool, pictureBox1);
         }
 
         private void RgbToolButton(object sender, EventArgs e)
         {
-            toolBar.OnRGB(rgbTool);
+            toolBar.OnRGB(rgbTool, pictureBox1);
         }
 
         private void ExitButton(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
 
     }
