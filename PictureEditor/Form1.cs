@@ -13,9 +13,8 @@ namespace PictureEditor
 {
     public partial class Form1 : Form
     {
-        FileManip fileManip = new FileManip();
-        Editor editor = new Editor();
-        ToolStripButton previous;
+        private FileManip fileManip = new FileManip();
+        private ToolBar toolBar = new ToolBar();
 
         public Form1()
         {
@@ -29,33 +28,27 @@ namespace PictureEditor
 
         private void SaveButton(object sender, EventArgs e)
         {
-            fileManip.OnSave();
+            fileManip.OnSave(pictureBox1);
         }
 
         private void SaveAsButton(object sender, EventArgs e)
         {
-            fileManip.OnSaveAs();
+            fileManip.OnSaveAs(pictureBox1);
         }
 
         private void LightningToolButton(object sender, EventArgs e)
         {
-            editor.OnLightning();
-            if (previous != null) previous.Checked = false;
-            previous = lightningTool;
+            toolBar.OnLightning(lightningTool);
         }
 
         private void ContrastToolButton(object sender, EventArgs e)
         {
-            editor.OnContrast();
-            if (previous != null) previous.Checked = false;
-            previous = contrastTool;
+            toolBar.OnContrast(contrastTool);
         }
 
         private void RgbToolButton(object sender, EventArgs e)
         {
-            editor.OnRGB();
-            if (previous != null) previous.Checked = false;
-            previous = rgbTool;
+            toolBar.OnRGB(rgbTool);
         }
 
         private void ExitButton(object sender, EventArgs e)

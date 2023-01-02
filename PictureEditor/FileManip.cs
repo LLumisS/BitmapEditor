@@ -10,23 +10,37 @@ namespace PictureEditor
 {
     internal class FileManip
     {
+        private string filePath;
+
         public void OnOpen(OpenFileDialog openDialog, PictureBox pictureBox)
         {
             if (openDialog.ShowDialog() == DialogResult.OK)
             {
                 //pictureBox.Image = Image.FromFile(openDialog.FileName);
-                pictureBox.Image = new Bitmap(openDialog.FileName);
+                filePath = openDialog.FileName;
+                pictureBox.Image = new Bitmap(filePath);
             }
         }
 
-        public void OnSave()
+        public void OnSave(PictureBox pictureBox)
         {
-
+            if (pictureBox.Image != null) pictureBox.Image.Save(filePath, System.Drawing.Imaging.ImageFormat.Png);
+            else MessageBox.Show("Please select a picture firstly.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
-        public void OnSaveAs()
+        public void OnSaveAs(PictureBox pictureBox)
         {
-
+            if (pictureBox.Image != null)
+            {
+                SaveFileDialog save = new SaveFileDialog();
+                save.Filter = "PNG|*.png";
+                save.RestoreDirectory = true;
+                if (save.ShowDialog() == DialogResult.OK)
+                {
+                    pictureBox.Image.Save(save.FileName, System.Drawing.Imaging.ImageFormat.Png);
+                }
+            }
+            else MessageBox.Show("Please select a picture firstly.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }
 }
