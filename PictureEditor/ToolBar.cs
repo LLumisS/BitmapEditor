@@ -9,12 +9,6 @@ namespace PictureEditor
 {
     internal class ToolBar
     {
-        private int lightningData;
-        private int contrastData;
-        private int redData;
-        private int greenData;
-        private int blueData;
-
         private ToolStripButton previous;
 
         public void OnLightning(ToolStripButton tool)
