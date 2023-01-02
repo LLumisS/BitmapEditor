@@ -25,7 +25,7 @@ namespace PictureEditor
             previous = tool;
         }
 
-        public void OnLightning(ToolStripButton tool, PictureBox pictureBox)
+        public void OnBrightness(ToolStripButton tool, PictureBox pictureBox)
         {
             Check(tool, pictureBox);
         }

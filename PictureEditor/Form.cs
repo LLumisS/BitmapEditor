@@ -36,9 +36,9 @@ namespace PictureEditor
             fileManip.OnSaveAs(pictureBox1);
         }
 
-        private void LightningToolButton(object sender, EventArgs e)
+        private void BrightnessToolButton(object sender, EventArgs e)
         {
-            toolBar.OnLightning(lightningTool, pictureBox1);
+            toolBar.OnBrightness(brightnessTool, pictureBox1);
         }
 
         private void ContrastToolButton(object sender, EventArgs e)
@@ -55,6 +55,5 @@ namespace PictureEditor
         {
             Close();
         }
-
     }
 }

@@ -40,7 +40,7 @@
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.lightningTool = new System.Windows.Forms.ToolStripButton();
+            this.brightnessTool = new System.Windows.Forms.ToolStripButton();
             this.contrastTool = new System.Windows.Forms.ToolStripButton();
             this.rgbTool = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
@@ -118,28 +118,28 @@
             // openToolStripMenuItem
             // 
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.openToolStripMenuItem.Text = "Open";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.OpenButton);
             // 
             // saveToolStripMenuItem
             // 
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.saveToolStripMenuItem.Text = "Save";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.SaveButton);
             // 
             // saveAsToolStripMenuItem
             // 
             this.saveAsToolStripMenuItem.Name = "saveAsToolStripMenuItem";
-            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
+            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.saveAsToolStripMenuItem.Text = "Save As...";
             this.saveAsToolStripMenuItem.Click += new System.EventHandler(this.SaveAsButton);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitButton);
             // 
@@ -151,27 +151,27 @@
             // 
             this.toolStrip1.Dock = System.Windows.Forms.DockStyle.Left;
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.lightningTool,
+            this.brightnessTool,
             this.contrastTool,
             this.rgbTool});
             this.toolStrip1.Location = new System.Drawing.Point(0, 24);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(24, 426);
+            this.toolStrip1.Size = new System.Drawing.Size(32, 426);
             this.toolStrip1.Stretch = true;
             this.toolStrip1.TabIndex = 2;
             this.toolStrip1.Text = "toolStrip1";
             // 
-            // lightningTool
+            // brightnessTool
             // 
-            this.lightningTool.CheckOnClick = true;
-            this.lightningTool.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.lightningTool.Image = ((System.Drawing.Image)(resources.GetObject("lightningTool.Image")));
-            this.lightningTool.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.lightningTool.Name = "lightningTool";
-            this.lightningTool.Size = new System.Drawing.Size(21, 20);
-            this.lightningTool.Text = "toolStripButton1";
-            this.lightningTool.ToolTipText = "Lightning";
-            this.lightningTool.Click += new System.EventHandler(this.LightningToolButton);
+            this.brightnessTool.CheckOnClick = true;
+            this.brightnessTool.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.brightnessTool.Image = ((System.Drawing.Image)(resources.GetObject("brightnessTool.Image")));
+            this.brightnessTool.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.brightnessTool.Name = "brightnessTool";
+            this.brightnessTool.Size = new System.Drawing.Size(29, 20);
+            this.brightnessTool.Text = "toolStripButton1";
+            this.brightnessTool.ToolTipText = "Brightness";
+            this.brightnessTool.Click += new System.EventHandler(this.BrightnessToolButton);
             // 
             // contrastTool
             // 
@@ -180,7 +180,7 @@
             this.contrastTool.Image = ((System.Drawing.Image)(resources.GetObject("contrastTool.Image")));
             this.contrastTool.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.contrastTool.Name = "contrastTool";
-            this.contrastTool.Size = new System.Drawing.Size(23, 22);
+            this.contrastTool.Size = new System.Drawing.Size(29, 20);
             this.contrastTool.Text = "toolStripButton2";
             this.contrastTool.ToolTipText = "Contrast";
             this.contrastTool.Click += new System.EventHandler(this.ContrastToolButton);
@@ -192,7 +192,7 @@
             this.rgbTool.Image = ((System.Drawing.Image)(resources.GetObject("rgbTool.Image")));
             this.rgbTool.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.rgbTool.Name = "rgbTool";
-            this.rgbTool.Size = new System.Drawing.Size(23, 22);
+            this.rgbTool.Size = new System.Drawing.Size(29, 20);
             this.rgbTool.Text = "toolStripButton3";
             this.rgbTool.ToolTipText = "RGB";
             this.rgbTool.Click += new System.EventHandler(this.RgbToolButton);
@@ -242,7 +242,7 @@
         private System.Windows.Forms.ToolStripMenuItem saveAsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripButton lightningTool;
+        private System.Windows.Forms.ToolStripButton brightnessTool;
         private System.Windows.Forms.ToolStripButton contrastTool;
         private System.Windows.Forms.ToolStripButton rgbTool;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
