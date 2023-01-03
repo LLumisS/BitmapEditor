@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Drawing.Imaging;
 
 namespace PictureEditor
 {
@@ -18,8 +19,14 @@ namespace PictureEditor
             {
                 //pictureBox.Image = Image.FromFile(openDialog.FileName);
                 filePath = openDialog.FileName;
-
-                try { pictureBox.Image = new Bitmap(filePath); }
+                
+                try
+                {
+                    Bitmap img_temp = new Bitmap(filePath);
+                    Bitmap img = new Bitmap(img_temp);
+                    img_temp.Dispose();
+                    pictureBox.Image = img; 
+                }
                 catch { MessageBox.Show("This picture is too big.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
             }
         }
