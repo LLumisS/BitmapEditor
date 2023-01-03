@@ -17,7 +17,6 @@ namespace PictureEditor
         {
             if (openDialog.ShowDialog() == DialogResult.OK)
             {
-                //pictureBox.Image = Image.FromFile(openDialog.FileName);
                 filePath = openDialog.FileName;
                 
                 try
@@ -46,7 +45,7 @@ namespace PictureEditor
                 save.RestoreDirectory = true;
                 if (save.ShowDialog() == DialogResult.OK)
                 {
-                    pictureBox.Image.Save(save.FileName);//, System.Drawing.Imaging.ImageFormat.Png
+                    pictureBox.Image.Save(save.FileName);
                 }
             }
             else MessageBox.Show("Please select a picture firstly.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
