@@ -15,9 +15,9 @@ namespace PictureEditor
         private Contrast contrastDialog = new Contrast();
         private RGB rgbDialog = new RGB();
 
-        //private ToolStripButton previous;
+        private Form previous;
 
-        private bool Check(ToolStripButton tool, PictureBox pictureBox)
+        private bool Check(ToolStripButton tool, PictureBox pictureBox, Form dialog)
         {
             if (pictureBox.Image == null)
             {
@@ -29,37 +29,33 @@ namespace PictureEditor
                     MessageBoxIcon.Error);
                 return false;
             }
-            //if (previous != null) previous.Checked = false;
             tool.Checked = false;
-            //previous = tool;
+
+            if (previous != null) previous.Hide();
+            dialog.Show();
+            dialog.Activate();
+            previous = dialog;
+
             return true;
         }
 
         public void OnBrightness(ToolStripButton tool, PictureBox pictureBox)
         {
-            if (Check(tool, pictureBox))
-            {
-                brightnessDialog.Show();
+            if (Check(tool, pictureBox, brightnessDialog))
                 brightnessDialog.SetImage(pictureBox.Image);
-            }
         }
 
         public void OnContrast(ToolStripButton tool, PictureBox pictureBox)
         {
-            if (Check(tool, pictureBox))
-            {
-                contrastDialog.Show();
+            if (Check(tool, pictureBox, contrastDialog))
                 contrastDialog.SetImage(pictureBox.Image);
-            }
         }
 
         public void OnRGB(ToolStripButton tool, PictureBox pictureBox)
         {
-            if (Check(tool, pictureBox))
-            {
-                rgbDialog.Show();
+            if (Check(tool, pictureBox, rgbDialog))
                 rgbDialog.SetImage(pictureBox.Image);
-            }
         }
+        
     }
 }
