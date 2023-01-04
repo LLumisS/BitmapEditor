@@ -29,9 +29,9 @@ namespace PictureEditor
                     MessageBoxIcon.Error);
                 return false;
             }
-            if (previous != null) previous.Checked = false;
-            tool.Checked = true;
-            previous = tool;
+            //if (previous != null) previous.Checked = false;
+            tool.Checked = false;
+            //previous = tool;
             return true;
         }
 

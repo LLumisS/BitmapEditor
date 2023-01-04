@@ -120,7 +120,7 @@
             this.rgbTool});
             this.toolStrip1.Location = new System.Drawing.Point(0, 24);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(24, 426);
+            this.toolStrip1.Size = new System.Drawing.Size(32, 426);
             this.toolStrip1.Stretch = true;
             this.toolStrip1.TabIndex = 2;
             this.toolStrip1.Text = "toolStrip1";
@@ -132,7 +132,7 @@
             this.brightnessTool.Image = ((System.Drawing.Image)(resources.GetObject("brightnessTool.Image")));
             this.brightnessTool.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.brightnessTool.Name = "brightnessTool";
-            this.brightnessTool.Size = new System.Drawing.Size(21, 20);
+            this.brightnessTool.Size = new System.Drawing.Size(29, 20);
             this.brightnessTool.Text = "toolStripButton1";
             this.brightnessTool.ToolTipText = "Brightness";
             this.brightnessTool.Click += new System.EventHandler(this.BrightnessToolButton);
@@ -144,7 +144,7 @@
             this.contrastTool.Image = ((System.Drawing.Image)(resources.GetObject("contrastTool.Image")));
             this.contrastTool.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.contrastTool.Name = "contrastTool";
-            this.contrastTool.Size = new System.Drawing.Size(21, 20);
+            this.contrastTool.Size = new System.Drawing.Size(29, 20);
             this.contrastTool.Text = "toolStripButton2";
             this.contrastTool.ToolTipText = "Contrast";
             this.contrastTool.Click += new System.EventHandler(this.ContrastToolButton);
@@ -156,7 +156,7 @@
             this.rgbTool.Image = ((System.Drawing.Image)(resources.GetObject("rgbTool.Image")));
             this.rgbTool.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.rgbTool.Name = "rgbTool";
-            this.rgbTool.Size = new System.Drawing.Size(21, 20);
+            this.rgbTool.Size = new System.Drawing.Size(29, 20);
             this.rgbTool.Text = "toolStripButton3";
             this.rgbTool.ToolTipText = "RGB";
             this.rgbTool.Click += new System.EventHandler(this.RgbToolButton);
@@ -164,9 +164,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Location = new System.Drawing.Point(24, 24);
+            this.pictureBox1.Location = new System.Drawing.Point(32, 24);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(776, 426);
+            this.pictureBox1.Size = new System.Drawing.Size(768, 426);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;

@@ -26,7 +26,19 @@ namespace PictureEditor.Forms
 
         private void TextInput(object sender, EventArgs e)
         {
+            try
+            {
+                trackBar1.Value = Int32.Parse(textBox1.Text);
+            }
+            catch
+            {
+                ScrollChaged(sender, e);
+            }
+        }
 
+        private void ScrollChaged(object sender, EventArgs e)
+        {
+            textBox1.Text = trackBar1.Value.ToString();
         }
 
         private void OKButton(object sender, EventArgs e)
