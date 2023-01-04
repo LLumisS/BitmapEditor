@@ -28,14 +28,25 @@ namespace PictureEditor
                     pictureBox.Image = img;
                     openDialog.FileName = Path.GetFileName(filePath);
                 }
-                catch { MessageBox.Show("This picture is too big.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+                catch
+                {
+                    MessageBox.Show(
+                        "This picture is too big.",
+                        "Error",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
+                }
             }
         }
 
         public void OnSave(PictureBox pictureBox)
         {
             if (pictureBox.Image != null) pictureBox.Image.Save(filePath);
-            else MessageBox.Show("Please select a picture firstly.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else MessageBox.Show(
+                "Please select a picture firstly.",
+                "Error",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Error);
         }
 
         public void OnSaveAs(PictureBox pictureBox)
@@ -51,7 +62,11 @@ namespace PictureEditor
                     pictureBox.Image.Save(save.FileName);
                 }
             }
-            else MessageBox.Show("Please select a picture firstly.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            else MessageBox.Show(
+                "Please select a picture firstly.", 
+                "Error", 
+                MessageBoxButtons.OK, 
+                MessageBoxIcon.Error);
         }
     }
 }

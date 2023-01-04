@@ -17,7 +17,11 @@ namespace PictureEditor
             if (pictureBox.Image == null)
             {
                 tool.Checked = false;
-                MessageBox.Show("Please select a picture firstly.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(
+                    "Please select a picture firstly.",
+                    "Error",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
                 return;
             }
             if (previous != null) previous.Checked = false;
