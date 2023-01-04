@@ -47,7 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\ToolBar.cs" />
-    <Compile Include="Classes\FileManip.cs" />
+    <Compile Include="Classes\Files.cs" />
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>

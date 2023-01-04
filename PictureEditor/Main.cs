@@ -13,7 +13,7 @@ namespace PictureEditor
 {
     public partial class Main : System.Windows.Forms.Form
     {
-        private FileManip fileManip = new FileManip();
+        private Files files = new Files();
         private ToolBar toolBar = new ToolBar();
 
         public Main()
@@ -23,17 +23,17 @@ namespace PictureEditor
 
         private void OpenButton(object sender, EventArgs e)
         {
-            fileManip.OnOpen(openFileDialog, pictureBox1);
+            files.OnOpen(openFileDialog, pictureBox1);
         }
 
         private void SaveButton(object sender, EventArgs e)
         {
-            fileManip.OnSave(pictureBox1);
+            files.OnSave(pictureBox1);
         }
 
         private void SaveAsButton(object sender, EventArgs e)
         {
-            fileManip.OnSaveAs(pictureBox1);
+            files.OnSaveAs(pictureBox1);
         }
 
         private void BrightnessToolButton(object sender, EventArgs e)

@@ -10,7 +10,7 @@ using System.IO;
 
 namespace PictureEditor
 {
-    internal class FileManip
+    internal class Files
     {
         private string filePath;
 
