@@ -11,12 +11,12 @@ using System.Windows.Forms;
 
 namespace PictureEditor
 {
-    public partial class Form : System.Windows.Forms.Form
+    public partial class Main : System.Windows.Forms.Form
     {
         private FileManip fileManip = new FileManip();
         private ToolBar toolBar = new ToolBar();
 
-        public Form()
+        public Main()
         {
             InitializeComponent();
         }

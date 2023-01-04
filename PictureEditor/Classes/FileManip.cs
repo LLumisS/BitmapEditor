@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing.Imaging;
+using System.IO;
 
 namespace PictureEditor
 {
@@ -24,7 +25,8 @@ namespace PictureEditor
                     Bitmap img_temp = new Bitmap(filePath);
                     Bitmap img = new Bitmap(img_temp);
                     img_temp.Dispose();
-                    pictureBox.Image = img; 
+                    pictureBox.Image = img;
+                    openDialog.FileName = Path.GetFileName(filePath);
                 }
                 catch { MessageBox.Show("This picture is too big.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); }
             }
@@ -43,6 +45,7 @@ namespace PictureEditor
                 SaveFileDialog save = new SaveFileDialog();
                 save.Filter = "Images|*.jpg;*.bmp;*.png";
                 save.RestoreDirectory = true;
+                save.FileName = Path.GetFileName(filePath);
                 if (save.ShowDialog() == DialogResult.OK)
                 {
                     pictureBox.Image.Save(save.FileName);
