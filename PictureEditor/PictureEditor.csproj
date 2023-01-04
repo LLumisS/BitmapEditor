@@ -48,16 +48,43 @@
   <ItemGroup>
     <Compile Include="Classes\ToolBar.cs" />
     <Compile Include="Classes\Files.cs" />
-    <Compile Include="Main.cs">
+    <Compile Include="Forms\Brightness.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Main.Designer.cs">
+    <Compile Include="Forms\Brightness.Designer.cs">
+      <DependentUpon>Brightness.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Contrast.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Contrast.Designer.cs">
+      <DependentUpon>Contrast.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Main.Designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RGB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RGB.Designer.cs">
+      <DependentUpon>RGB.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Main.resx">
+    <EmbeddedResource Include="Forms\Brightness.resx">
+      <DependentUpon>Brightness.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Contrast.resx">
+      <DependentUpon>Contrast.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RGB.resx">
+      <DependentUpon>RGB.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

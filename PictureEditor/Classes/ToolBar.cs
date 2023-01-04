@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PictureEditor.Forms;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
@@ -10,9 +11,13 @@ namespace PictureEditor
 {
     internal class ToolBar
     {
+        private Brightness brightnessDialog = new Brightness();
+        private Contrast contrastDialog = new Contrast();
+        private RGB rgbDialog = new RGB();
+
         private ToolStripButton previous;
 
-        private void Check(ToolStripButton tool, PictureBox pictureBox)
+        private bool Check(ToolStripButton tool, PictureBox pictureBox)
         {
             if (pictureBox.Image == null)
             {
@@ -22,26 +27,39 @@ namespace PictureEditor
                     "Error",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
-                return;
+                return false;
             }
             if (previous != null) previous.Checked = false;
             tool.Checked = true;
             previous = tool;
+            return true;
         }
 
         public void OnBrightness(ToolStripButton tool, PictureBox pictureBox)
         {
-            Check(tool, pictureBox);
+            if (Check(tool, pictureBox))
+            {
+                brightnessDialog.Show();
+                brightnessDialog.SetImage(pictureBox.Image);
+            }
         }
 
         public void OnContrast(ToolStripButton tool, PictureBox pictureBox)
         {
-            Check(tool, pictureBox);
+            if (Check(tool, pictureBox))
+            {
+                contrastDialog.Show();
+                contrastDialog.SetImage(pictureBox.Image);
+            }
         }
 
         public void OnRGB(ToolStripButton tool, PictureBox pictureBox)
         {
-            Check(tool, pictureBox);
+            if (Check(tool, pictureBox))
+            {
+                rgbDialog.Show();
+                rgbDialog.SetImage(pictureBox.Image);
+            }
         }
     }
 }
