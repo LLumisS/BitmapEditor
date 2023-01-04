@@ -15,7 +15,7 @@ namespace PictureEditor
         private Contrast contrastDialog = new Contrast();
         private RGB rgbDialog = new RGB();
 
-        private ToolStripButton previous;
+        //private ToolStripButton previous;
 
         private bool Check(ToolStripButton tool, PictureBox pictureBox)
         {
