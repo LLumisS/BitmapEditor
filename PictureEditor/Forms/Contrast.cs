@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PictureEditor.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,18 +11,11 @@ using System.Windows.Forms;
 
 namespace PictureEditor.Forms
 {
-    public partial class Contrast : Form
+    public partial class Contrast : Editor
     {
-        private Image image;
-
         public Contrast()
         {
             InitializeComponent();
-        }
-
-        public void SetImage(Image _image)
-        {
-            image = _image;
         }
 
         private void TextInput(object sender, EventArgs e)

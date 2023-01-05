@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PictureEditor.Classes;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -11,18 +12,11 @@ using System.Windows.Forms;
 
 namespace PictureEditor.Forms
 {
-    public partial class RGB : Form
+    public partial class RGB : Editor
     {
-        private Image image;
-
         public RGB()
         {
             InitializeComponent();
-        }
-
-        public void SetImage(Image _image)
-        {
-            image = _image;
         }
 
         private void TextInputButton(object sender, EventArgs e)

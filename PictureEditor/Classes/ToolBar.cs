@@ -1,4 +1,5 @@
 ﻿using PictureEditor.Forms;
+using PictureEditor.Classes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,17 +18,16 @@ namespace PictureEditor
 
         private Form previous;
 
-        private bool Check(ToolStripButton tool, PictureBox pictureBox, Form dialog)
+        private void Start(ToolStripButton tool, PictureBox pictureBox, Editor dialog)
         {
             if (pictureBox.Image == null)
             {
-                tool.Checked = false;
                 MessageBox.Show(
                     "Please select a picture firstly.",
                     "Error",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
-                return false;
+                return;
             }
             tool.Checked = false;
 
@@ -35,26 +35,22 @@ namespace PictureEditor
             dialog.Show();
             dialog.Activate();
             previous = dialog;
-
-            return true;
+            dialog.SetImage(pictureBox.Image);
         }
 
         public void OnBrightness(ToolStripButton tool, PictureBox pictureBox)
         {
-            if (Check(tool, pictureBox, brightnessDialog))
-                brightnessDialog.SetImage(pictureBox.Image);
+            Start(tool, pictureBox, brightnessDialog);
         }
 
         public void OnContrast(ToolStripButton tool, PictureBox pictureBox)
         {
-            if (Check(tool, pictureBox, contrastDialog))
-                contrastDialog.SetImage(pictureBox.Image);
+            Start(tool, pictureBox, contrastDialog);
         }
 
         public void OnRGB(ToolStripButton tool, PictureBox pictureBox)
         {
-            if (Check(tool, pictureBox, rgbDialog))
-                rgbDialog.SetImage(pictureBox.Image);
+            Start(tool, pictureBox, rgbDialog);
         }
         
     }
