@@ -22,7 +22,7 @@ namespace PictureEditor.Forms
         private void TextInputButton(object sender, EventArgs e)
         {
             TextBox textBox = sender as TextBox;
-            TrackBar trackBar = null;
+            TrackBar trackBar;
 
             if (Equals(textBox, textBox1)) trackBar = trackBar1;
             else if (Equals(textBox, textBox2)) trackBar = trackBar2;
@@ -41,7 +41,7 @@ namespace PictureEditor.Forms
         private void ScrollChagedButton(object sender, EventArgs e)
         {
             TrackBar trackBar = sender as TrackBar;
-            TextBox textBox = null;
+            TextBox textBox;
 
             if (Equals(trackBar, trackBar1)) textBox = textBox1;
             else if (Equals(trackBar, trackBar2)) textBox = textBox2;
