@@ -84,6 +84,7 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.trackBar1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "Contrast";
             this.Text = "Contrast";
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();

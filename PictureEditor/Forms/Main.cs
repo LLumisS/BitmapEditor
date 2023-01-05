@@ -14,6 +14,10 @@ namespace PictureEditor
 {
     public partial class Main : Form
     {
+        private Brightness brightnessDialog = new Brightness();
+        private Contrast contrastDialog = new Contrast();
+        private RGB rgbDialog = new RGB();
+
         private Files files = new Files();
         private ToolBar toolBar = new ToolBar();
 
@@ -39,17 +43,17 @@ namespace PictureEditor
 
         private void BrightnessToolButton(object sender, EventArgs e)
         {
-            toolBar.OnBrightness(brightnessTool, pictureBox1);
+            toolBar.Start(brightnessTool, pictureBox1, brightnessDialog);
         }
 
         private void ContrastToolButton(object sender, EventArgs e)
         {
-            toolBar.OnContrast(contrastTool, pictureBox1);
+            toolBar.Start(contrastTool, pictureBox1, contrastDialog);
         }
 
         private void RgbToolButton(object sender, EventArgs e)
         {
-            toolBar.OnRGB(rgbTool, pictureBox1);
+            toolBar.Start(rgbTool, pictureBox1, rgbDialog);
         }
 
         private void ExitButton(object sender, EventArgs e)

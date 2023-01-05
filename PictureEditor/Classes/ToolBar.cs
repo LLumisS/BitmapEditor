@@ -12,16 +12,13 @@ namespace PictureEditor
 {
     internal class ToolBar
     {
-        private Brightness brightnessDialog = new Brightness();
-        private Contrast contrastDialog = new Contrast();
-        private RGB rgbDialog = new RGB();
+        private Editor previous;
 
-        private Form previous;
-
-        private void Start(ToolStripButton tool, PictureBox pictureBox, Editor dialog)
+        public void Start(ToolStripButton tool, PictureBox pictureBox, Editor dialog)
         {
             if (pictureBox.Image == null)
             {
+                tool.Checked = false;
                 MessageBox.Show(
                     "Please select a picture firstly.",
                     "Error",
@@ -37,21 +34,5 @@ namespace PictureEditor
             previous = dialog;
             dialog.SetImage(pictureBox.Image);
         }
-
-        public void OnBrightness(ToolStripButton tool, PictureBox pictureBox)
-        {
-            Start(tool, pictureBox, brightnessDialog);
-        }
-
-        public void OnContrast(ToolStripButton tool, PictureBox pictureBox)
-        {
-            Start(tool, pictureBox, contrastDialog);
-        }
-
-        public void OnRGB(ToolStripButton tool, PictureBox pictureBox)
-        {
-            Start(tool, pictureBox, rgbDialog);
-        }
-        
     }
 }

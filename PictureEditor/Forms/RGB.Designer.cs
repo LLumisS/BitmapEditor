@@ -169,6 +169,7 @@ namespace PictureEditor.Forms
             this.Controls.Add(this.trackBar3);
             this.Controls.Add(this.trackBar2);
             this.Controls.Add(this.trackBar1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "RGB";
             this.Text = "RGB";
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
