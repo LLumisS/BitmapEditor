@@ -12,7 +12,16 @@ namespace PictureEditor
 {
     internal class ToolBar
     {
-        private Editor previous;
+        private ToolStripButton previousTool;
+        private Editor previousDialog;
+        private Form parent;
+
+        private ToolBar() { }
+
+        public ToolBar (Form _parent)
+        {
+            parent = _parent;
+        }
 
         public void Start(ToolStripButton tool, PictureBox pictureBox, Editor dialog)
         {
@@ -26,13 +35,25 @@ namespace PictureEditor
                     MessageBoxIcon.Error);
                 return;
             }
-            tool.Checked = false;
+            if (previousTool != null) previousTool.Checked = false;
+            previousTool = tool;
+            tool.Checked = true;
+            
+            SetSubWindowPos(dialog, pictureBox);
+            
+        }
 
-            if (previous != null) previous.Hide();
+        private void SetSubWindowPos(Editor dialog, PictureBox pictureBox)
+        {
+            if (previousDialog != null) previousDialog.Hide();
+            previousDialog = dialog;
+
             dialog.Show();
             dialog.Activate();
-            previous = dialog;
-            dialog.SetImage(pictureBox.Image);
+
+            const int indent = 5;
+            dialog.Left = parent.Left + parent.Width + indent;
+            dialog.Top = parent.Top;
         }
     }
 }

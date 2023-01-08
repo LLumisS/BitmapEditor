@@ -36,16 +36,16 @@
             this.saveAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.filtersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.brightnessToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.contrastToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rGBToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.brightnessTool = new System.Windows.Forms.ToolStripButton();
             this.contrastTool = new System.Windows.Forms.ToolStripButton();
             this.rgbTool = new System.Windows.Forms.ToolStripButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.filtersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.brightnessToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.contrastToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.rGBToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -107,6 +107,37 @@
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitButton);
             // 
+            // filtersToolStripMenuItem
+            // 
+            this.filtersToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.brightnessToolStripMenuItem,
+            this.contrastToolStripMenuItem,
+            this.rGBToolStripMenuItem});
+            this.filtersToolStripMenuItem.Name = "filtersToolStripMenuItem";
+            this.filtersToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
+            this.filtersToolStripMenuItem.Text = "Filters";
+            // 
+            // brightnessToolStripMenuItem
+            // 
+            this.brightnessToolStripMenuItem.Name = "brightnessToolStripMenuItem";
+            this.brightnessToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
+            this.brightnessToolStripMenuItem.Text = "Brightness";
+            this.brightnessToolStripMenuItem.Click += new System.EventHandler(this.BrightnessToolButton);
+            // 
+            // contrastToolStripMenuItem
+            // 
+            this.contrastToolStripMenuItem.Name = "contrastToolStripMenuItem";
+            this.contrastToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
+            this.contrastToolStripMenuItem.Text = "Contrast";
+            this.contrastToolStripMenuItem.Click += new System.EventHandler(this.ContrastToolButton);
+            // 
+            // rGBToolStripMenuItem
+            // 
+            this.rGBToolStripMenuItem.Name = "rGBToolStripMenuItem";
+            this.rGBToolStripMenuItem.Size = new System.Drawing.Size(129, 22);
+            this.rGBToolStripMenuItem.Text = "RGB";
+            this.rGBToolStripMenuItem.Click += new System.EventHandler(this.RgbToolButton);
+            // 
             // openFileDialog
             // 
             this.openFileDialog.Filter = "Images|*.jpg;*.bmp;*.png";
@@ -144,7 +175,7 @@
             this.contrastTool.Image = ((System.Drawing.Image)(resources.GetObject("contrastTool.Image")));
             this.contrastTool.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.contrastTool.Name = "contrastTool";
-            this.contrastTool.Size = new System.Drawing.Size(29, 20);
+            this.contrastTool.Size = new System.Drawing.Size(21, 20);
             this.contrastTool.Text = "toolStripButton2";
             this.contrastTool.ToolTipText = "Contrast";
             this.contrastTool.Click += new System.EventHandler(this.ContrastToolButton);
@@ -156,7 +187,7 @@
             this.rgbTool.Image = ((System.Drawing.Image)(resources.GetObject("rgbTool.Image")));
             this.rgbTool.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.rgbTool.Name = "rgbTool";
-            this.rgbTool.Size = new System.Drawing.Size(29, 20);
+            this.rgbTool.Size = new System.Drawing.Size(21, 20);
             this.rgbTool.Text = "toolStripButton3";
             this.rgbTool.ToolTipText = "RGB";
             this.rgbTool.Click += new System.EventHandler(this.RgbToolButton);
@@ -171,37 +202,6 @@
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
-            // filtersToolStripMenuItem
-            // 
-            this.filtersToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.brightnessToolStripMenuItem,
-            this.contrastToolStripMenuItem,
-            this.rGBToolStripMenuItem});
-            this.filtersToolStripMenuItem.Name = "filtersToolStripMenuItem";
-            this.filtersToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
-            this.filtersToolStripMenuItem.Text = "Filters";
-            // 
-            // brightnessToolStripMenuItem
-            // 
-            this.brightnessToolStripMenuItem.Name = "brightnessToolStripMenuItem";
-            this.brightnessToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.brightnessToolStripMenuItem.Text = "Brightness";
-            this.brightnessToolStripMenuItem.Click += new System.EventHandler(this.BrightnessToolButton);
-            // 
-            // contrastToolStripMenuItem
-            // 
-            this.contrastToolStripMenuItem.Name = "contrastToolStripMenuItem";
-            this.contrastToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.contrastToolStripMenuItem.Text = "Contrast";
-            this.contrastToolStripMenuItem.Click += new System.EventHandler(this.ContrastToolButton);
-            // 
-            // rGBToolStripMenuItem
-            // 
-            this.rGBToolStripMenuItem.Name = "rGBToolStripMenuItem";
-            this.rGBToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.rGBToolStripMenuItem.Text = "RGB";
-            this.rGBToolStripMenuItem.Click += new System.EventHandler(this.RgbToolButton);
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -212,6 +212,7 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Main";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Picture Editor";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing.Imaging;
 using System.IO;
+using PictureEditor.Classes;
 
 namespace PictureEditor
 {
