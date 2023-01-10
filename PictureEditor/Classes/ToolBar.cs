@@ -13,6 +13,7 @@ namespace PictureEditor
     internal class ToolBar
     {
         private ToolStripButton previousTool;
+        private ToolStripMenuItem previousMenu;
         private Editor previousDialog;
         private readonly Form parent;
 
@@ -23,7 +24,11 @@ namespace PictureEditor
             parent = _parent;
         }
 
-        public void Start(ToolStripButton tool, PictureBox pictureBox, Editor dialog)
+        public void Start(
+            ToolStripButton tool, 
+            ToolStripMenuItem menu, 
+            PictureBox pictureBox, 
+            Editor dialog)
         {
             if (pictureBox.Image == null)
             {
@@ -38,6 +43,10 @@ namespace PictureEditor
             if (previousTool != null) previousTool.Checked = false;
             previousTool = tool;
             tool.Checked = true;
+
+            if (previousMenu != null) previousMenu.Checked = false;
+            previousMenu = menu;
+            menu.Checked = true;
             
             SetSubWindowPos(dialog, pictureBox);
         }

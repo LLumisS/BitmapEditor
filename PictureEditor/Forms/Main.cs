@@ -59,17 +59,17 @@ namespace PictureEditor
 
         private void BrightnessToolButton(object sender, EventArgs e)
         {
-            toolBar.Start(brightnessTool, pictureBox1, brightnessDialog);
+            toolBar.Start(brightnessTool, brightnessToolStripMenuItem, pictureBox1, brightnessDialog);
         }
 
         private void ContrastToolButton(object sender, EventArgs e)
         {
-            toolBar.Start(contrastTool, pictureBox1, contrastDialog);
+            toolBar.Start(contrastTool, contrastToolStripMenuItem, pictureBox1, contrastDialog);
         }
 
         private void RgbToolButton(object sender, EventArgs e)
         {
-            toolBar.Start(rgbTool, pictureBox1, rgbDialog);
+            toolBar.Start(rgbTool, RGBToolStripMenuItem, pictureBox1, rgbDialog);
         }
 
         private void ExitButton(object sender, EventArgs e)
