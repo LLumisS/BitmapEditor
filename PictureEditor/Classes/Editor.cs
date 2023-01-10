@@ -17,7 +17,7 @@ namespace PictureEditor.Classes
         static protected Operation operation = def;
 
         static protected PictureBox pictureBox;
-        static protected Image sourceImg;
+        static protected Bitmap source;
 
         static protected int brightChange = 0;
         static protected int contrastChange = 0;
@@ -25,7 +25,7 @@ namespace PictureEditor.Classes
         static public void SetImage(PictureBox _pictureBox)
         {
             pictureBox = _pictureBox;
-            sourceImg = _pictureBox.Image;
+            source = (Bitmap)_pictureBox.Image;
         }
 
         protected byte GetByte(int value)
@@ -35,7 +35,6 @@ namespace PictureEditor.Classes
 
         protected void ApplyChanges()
         {
-            Bitmap source = (Bitmap)sourceImg;
             Bitmap result = new Bitmap(source.Width, source.Height);
 
             for (int y = 0; y < source.Height; y++)

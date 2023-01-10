@@ -15,12 +15,12 @@ namespace PictureEditor
 {
     public partial class Main : Form
     {
-        private Brightness brightnessDialog = new Brightness();
-        private Contrast contrastDialog = new Contrast();
-        private RGB rgbDialog = new RGB();
+        private readonly Brightness brightnessDialog = new Brightness();
+        private readonly Contrast contrastDialog = new Contrast();
+        private readonly RGB rgbDialog = new RGB();
 
-        private Files files = new Files();
-        private ToolBar toolBar; 
+        private readonly Files files = new Files();
+        private readonly ToolBar toolBar; 
 
         public Main()
         {

@@ -14,7 +14,7 @@ namespace PictureEditor
     {
         private ToolStripButton previousTool;
         private Editor previousDialog;
-        private Form parent;
+        private readonly Form parent;
 
         private ToolBar() { }
 
