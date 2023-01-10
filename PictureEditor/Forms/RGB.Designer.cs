@@ -49,31 +49,31 @@ namespace PictureEditor.Forms
             // trackBar1
             // 
             this.trackBar1.Location = new System.Drawing.Point(68, 12);
-            this.trackBar1.Maximum = 255;
+            this.trackBar1.Maximum = 128;
+            this.trackBar1.Minimum = -128;
             this.trackBar1.Name = "trackBar1";
             this.trackBar1.Size = new System.Drawing.Size(154, 45);
             this.trackBar1.TabIndex = 0;
-            this.trackBar1.Value = 128;
             this.trackBar1.Scroll += new System.EventHandler(this.ScrollChagedButton);
             // 
             // trackBar2
             // 
             this.trackBar2.Location = new System.Drawing.Point(68, 63);
-            this.trackBar2.Maximum = 255;
+            this.trackBar2.Maximum = 128;
+            this.trackBar2.Minimum = -128;
             this.trackBar2.Name = "trackBar2";
             this.trackBar2.Size = new System.Drawing.Size(154, 45);
             this.trackBar2.TabIndex = 1;
-            this.trackBar2.Value = 128;
             this.trackBar2.Scroll += new System.EventHandler(this.ScrollChagedButton);
             // 
             // trackBar3
             // 
             this.trackBar3.Location = new System.Drawing.Point(68, 114);
-            this.trackBar3.Maximum = 255;
+            this.trackBar3.Maximum = 128;
+            this.trackBar3.Minimum = -128;
             this.trackBar3.Name = "trackBar3";
             this.trackBar3.Size = new System.Drawing.Size(154, 45);
             this.trackBar3.TabIndex = 2;
-            this.trackBar3.Value = 128;
             this.trackBar3.Scroll += new System.EventHandler(this.ScrollChagedButton);
             // 
             // label1
@@ -129,7 +129,7 @@ namespace PictureEditor.Forms
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(64, 20);
             this.textBox1.TabIndex = 8;
-            this.textBox1.Text = "128";
+            this.textBox1.Text = "0";
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox1.TextChanged += new System.EventHandler(this.TextInputButton);
             // 
@@ -139,7 +139,7 @@ namespace PictureEditor.Forms
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(64, 20);
             this.textBox2.TabIndex = 9;
-            this.textBox2.Text = "128";
+            this.textBox2.Text = "0";
             this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox2.TextChanged += new System.EventHandler(this.TextInputButton);
             // 
@@ -149,7 +149,7 @@ namespace PictureEditor.Forms
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(64, 20);
             this.textBox3.TabIndex = 10;
-            this.textBox3.Text = "128";
+            this.textBox3.Text = "0";
             this.textBox3.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox3.TextChanged += new System.EventHandler(this.TextInputButton);
             // 

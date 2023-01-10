@@ -57,7 +57,10 @@ namespace PictureEditor.Forms
 
         private void OKButton(object sender, EventArgs e)
         {
-
+            rChange = trackBar1.Value;
+            gChange = trackBar2.Value;
+            bChange = trackBar3.Value;
+            ApplyChanges();
         }
 
         private void ExitButton(object sender, EventArgs e)
