@@ -26,6 +26,8 @@ namespace PictureEditor.Classes
         static protected int gChange = 0;
         static protected int bChange = 0;
 
+        protected ToolStripButton tool;
+
         static public void SetImage(PictureBox _pictureBox)
         {
             pictureBox = _pictureBox;

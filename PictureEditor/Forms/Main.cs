@@ -15,17 +15,22 @@ namespace PictureEditor
 {
     public partial class Main : Form
     {
-        private readonly Brightness brightnessDialog = new Brightness();
-        private readonly Contrast contrastDialog = new Contrast();
-        private readonly RGB rgbDialog = new RGB();
-
         private readonly Files files = new Files();
         private readonly ToolBar toolBar;
+
+        private readonly Brightness brightnessDialog;
+        private readonly Contrast contrastDialog;
+        private readonly RGB rgbDialog;
 
         public Main()
         {
             InitializeComponent();
+
             toolBar = new ToolBar(this);
+
+            brightnessDialog = new Brightness(brightnessTool);
+            contrastDialog = new Contrast(contrastTool);
+            rgbDialog = new RGB(rgbTool);
         }
 
         private void Reset()

@@ -14,9 +14,10 @@ namespace PictureEditor.Forms
 {
     public partial class RGB : Editor
     {
-        public RGB()
+        public RGB(ToolStripButton _tool)
         {
             InitializeComponent();
+            tool = _tool;
         }
 
         private void TextInputButton(object sender, EventArgs e)
@@ -65,7 +66,13 @@ namespace PictureEditor.Forms
 
         private void ExitButton(object sender, EventArgs e)
         {
+            tool.Checked = false;
             Hide();
+        }
+
+        private void CloseButton(object sender, FormClosingEventArgs e)
+        {
+            tool.Checked = false;
         }
     }
 }

@@ -87,6 +87,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "Brightness";
             this.Text = "Brightness";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CloseButton);
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

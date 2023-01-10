@@ -87,6 +87,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "Contrast";
             this.Text = "Contrast";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CloseButton);
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

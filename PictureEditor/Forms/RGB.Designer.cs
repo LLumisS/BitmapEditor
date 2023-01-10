@@ -172,6 +172,7 @@ namespace PictureEditor.Forms
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "RGB";
             this.Text = "RGB";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CloseButton);
             ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar3)).EndInit();
