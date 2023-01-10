@@ -53,6 +53,13 @@ namespace PictureEditor.Forms
             textBox1.Text = trackBar1.Value.ToString();
         }
 
+        public override void Reset()
+        {
+            Hide();
+            trackBar1.Value = 0;
+            textBox1.Text = "0";
+        }
+
         private void ExitButton(object sender, EventArgs e)
         {
             Hide();

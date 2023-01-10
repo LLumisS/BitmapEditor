@@ -41,6 +41,13 @@ namespace PictureEditor.Forms
             ApplyChanges();
         }
 
+        public override void Reset()
+        {
+            Hide();
+            trackBar1.Value = 0;
+            textBox1.Text = "0";
+        }
+
         private void ExitButton(object sender, EventArgs e)
         {
             Hide();

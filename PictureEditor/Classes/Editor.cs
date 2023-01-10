@@ -51,5 +51,7 @@ namespace PictureEditor.Classes
                 }
             pictureBox.Image = result;
         }
+
+        public virtual void Reset() { }
     }
 }

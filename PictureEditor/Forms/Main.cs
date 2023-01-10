@@ -20,7 +20,7 @@ namespace PictureEditor
         private readonly RGB rgbDialog = new RGB();
 
         private readonly Files files = new Files();
-        private readonly ToolBar toolBar; 
+        private readonly ToolBar toolBar;
 
         public Main()
         {
@@ -28,10 +28,18 @@ namespace PictureEditor
             toolBar = new ToolBar(this);
         }
 
+        private void Reset()
+        {
+            brightnessDialog.Reset();
+            contrastDialog.Reset();
+            rgbDialog.Reset();
+        }
+
         private void OpenButton(object sender, EventArgs e)
         {
             files.OnOpen(openFileDialog, pictureBox1);
             Editor.SetImage(pictureBox1);
+            Reset();
         }
 
         private void SaveButton(object sender, EventArgs e)
