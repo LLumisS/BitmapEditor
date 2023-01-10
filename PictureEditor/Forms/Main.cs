@@ -32,9 +32,9 @@ namespace PictureEditor
         {
             files.OnOpen(openFileDialog, pictureBox1);
 
-            brightnessDialog.SetImage(pictureBox1.Image);
-            contrastDialog.SetImage(pictureBox1.Image);
-            rgbDialog.SetImage(pictureBox1.Image);
+            brightnessDialog.SetImage(pictureBox1);
+            contrastDialog.SetImage(pictureBox1);
+            rgbDialog.SetImage(pictureBox1);
         }
 
         private void SaveButton(object sender, EventArgs e)

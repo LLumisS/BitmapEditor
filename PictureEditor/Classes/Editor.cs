@@ -10,11 +10,13 @@ namespace PictureEditor.Classes
 {
     public class Editor : Form
     {
-        private Image image;
+        protected PictureBox pictureBox;
+        protected Image sourceImg;
 
-        public void SetImage(Image _image)
+        public void SetImage(PictureBox _pictureBox)
         {
-            image = _image;
+            pictureBox = _pictureBox;
+            sourceImg = _pictureBox.Image;
         }
     }
 }

@@ -39,10 +39,10 @@
             // 
             this.trackBar1.Location = new System.Drawing.Point(12, 53);
             this.trackBar1.Maximum = 100;
+            this.trackBar1.Minimum = -100;
             this.trackBar1.Name = "trackBar1";
             this.trackBar1.Size = new System.Drawing.Size(252, 45);
             this.trackBar1.TabIndex = 0;
-            this.trackBar1.Value = 50;
             this.trackBar1.Scroll += new System.EventHandler(this.ScrollChaged);
             // 
             // button1
@@ -71,7 +71,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(64, 20);
             this.textBox1.TabIndex = 3;
-            this.textBox1.Text = "50";
+            this.textBox1.Text = "0";
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox1.TextChanged += new System.EventHandler(this.TextInput);
             // 
