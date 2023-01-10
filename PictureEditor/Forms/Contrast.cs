@@ -13,6 +13,12 @@ namespace PictureEditor.Forms
 {
     public partial class Contrast : Editor
     {
+        private int Positive(byte channel, int percent) =>
+            (channel * 100 - 128 * percent) / (100 - percent);
+
+        private int Negative(byte channel, int percent) =>
+            (channel * (100 - percent) + 128 * percent) / 100;
+
         public Contrast()
         {
             InitializeComponent();
@@ -21,6 +27,12 @@ namespace PictureEditor.Forms
         private void OKButton(object sender, EventArgs e)
         {
             contrastChange = trackBar1.Value;
+
+            if (contrastChange < 0) operation = Negative;
+            else operation = Positive;
+
+            contrastChange = Math.Abs(contrastChange);
+
             ApplyChanges();
         }
 

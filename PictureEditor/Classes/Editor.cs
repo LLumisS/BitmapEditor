@@ -11,14 +11,10 @@ namespace PictureEditor.Classes
 {
     public class Editor : Form
     {
-        private delegate int Operation(byte a, int b);
-        private Operation operation;
+        static private int def(byte a, int b) => a;
 
-        private int Positive(byte channel, int percent) =>
-            (channel * 100 - 128 * percent) / (100 - percent);
-
-        private int Negative(byte channel, int percent) =>
-            (channel * (100 - percent) + 128 * percent) / 100;
+        protected delegate int Operation(byte a, int b);
+        static protected Operation operation = def;
 
         static protected PictureBox pictureBox;
         static protected Image sourceImg;
@@ -39,11 +35,6 @@ namespace PictureEditor.Classes
 
         protected void ApplyChanges()
         {
-            if (contrastChange < 0) operation = Negative;
-            else operation = Positive;
-
-            contrastChange = Math.Abs(contrastChange);
-
             Bitmap source = (Bitmap)sourceImg;
             Bitmap result = new Bitmap(source.Width, source.Height);
 
