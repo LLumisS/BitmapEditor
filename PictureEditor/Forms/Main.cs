@@ -1,4 +1,5 @@
 ﻿using PictureEditor.Forms;
+using PictureEditor.Classes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,7 +10,6 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.Window;
 
 namespace PictureEditor
 {
@@ -31,10 +31,7 @@ namespace PictureEditor
         private void OpenButton(object sender, EventArgs e)
         {
             files.OnOpen(openFileDialog, pictureBox1);
-
-            brightnessDialog.SetImage(pictureBox1);
-            contrastDialog.SetImage(pictureBox1);
-            rgbDialog.SetImage(pictureBox1);
+            Editor.SetImage(pictureBox1);
         }
 
         private void SaveButton(object sender, EventArgs e)

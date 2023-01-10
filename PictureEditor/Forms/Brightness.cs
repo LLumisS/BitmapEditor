@@ -37,24 +37,8 @@ namespace PictureEditor.Forms
 
         private void OKButton(object sender, EventArgs e)
         {
-            Bitmap source = (Bitmap)sourceImg;
-            Bitmap result = new Bitmap(source.Width, source.Height);
-
-            int change = trackBar1.Value * 128 / 100;
-
-            for (int y = 0; y < source.Height; y++)
-                for(int x = 0; x < source.Width; x++)
-                {
-                    Color color = source.GetPixel(x, y);
-
-                    byte r = GetByte(color.R + change);
-                    byte g = GetByte(color.G + change);
-                    byte b = GetByte(color.B + change);
-
-                    Color resColor = Color.FromArgb(r, g, b);
-                    result.SetPixel(x, y, resColor);
-                }
-            pictureBox.Image = result;
+            brightChange = trackBar1.Value * 128 / 100;
+            ApplyChanges();
         }
 
         private void ExitButton(object sender, EventArgs e)
