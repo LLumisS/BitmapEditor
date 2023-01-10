@@ -47,9 +47,9 @@ namespace PictureEditor.Forms
                 {
                     Color color = source.GetPixel(x, y);
 
-                    int r = Math.Max(0, Math.Min(255, color.R + change));
-                    int g = Math.Max(0, Math.Min(255, color.G + change));
-                    int b = Math.Max(0, Math.Min(255, color.B + change));
+                    byte r = GetByte(color.R + change);
+                    byte g = GetByte(color.G + change);
+                    byte b = GetByte(color.B + change);
 
                     Color resColor = Color.FromArgb(r, g, b);
                     result.SetPixel(x, y, resColor);

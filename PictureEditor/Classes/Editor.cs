@@ -18,5 +18,10 @@ namespace PictureEditor.Classes
             pictureBox = _pictureBox;
             sourceImg = _pictureBox.Image;
         }
+
+        protected byte GetByte(int value)
+        {
+            return (byte)Math.Max(0, Math.Min(255, value));
+        }
     }
 }
