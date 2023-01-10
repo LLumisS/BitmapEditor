@@ -1,11 +1,4 @@
-﻿using PictureEditor.Forms;
-using PictureEditor.Classes;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
+﻿using PictureEditor.Classes;
 using System.Windows.Forms;
 
 namespace PictureEditor
