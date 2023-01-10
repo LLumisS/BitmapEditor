@@ -40,7 +40,6 @@ namespace PictureEditor
             tool.Checked = true;
             
             SetSubWindowPos(dialog, pictureBox);
-            
         }
 
         private void SetSubWindowPos(Editor dialog, PictureBox pictureBox)
