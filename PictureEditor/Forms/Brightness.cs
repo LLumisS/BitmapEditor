@@ -18,6 +18,12 @@ namespace PictureEditor.Forms
             InitializeComponent();
         }
 
+        private void OKButton(object sender, EventArgs e)
+        {
+            brightChange = trackBar1.Value * 128 / 100;
+            ApplyChanges();
+        }
+
         private void TextInput(object sender, EventArgs e)
         {
             try
@@ -33,12 +39,6 @@ namespace PictureEditor.Forms
         private void ScrollChaged(object sender, EventArgs e)
         {
             textBox1.Text = trackBar1.Value.ToString();
-        }
-
-        private void OKButton(object sender, EventArgs e)
-        {
-            brightChange = trackBar1.Value * 128 / 100;
-            ApplyChanges();
         }
 
         public override void Reset()
