@@ -12,10 +12,11 @@ namespace PictureEditor.Forms
         private int Negative(byte channel, int percent) =>
             (channel * (100 - percent) + 128 * percent) / 100;
 
-        public Contrast(ToolStripButton _tool)
+        public Contrast(ToolStripButton _tool, ToolStripMenuItem _menu)
         {
             InitializeComponent();
             tool = _tool;
+            menu = _menu;
         }
 
         private void OKButton(object sender, EventArgs e)
@@ -57,12 +58,14 @@ namespace PictureEditor.Forms
         private void ExitButton(object sender, EventArgs e)
         {
             tool.Checked = false;
+            menu.Checked = false;
             Hide();
         }
 
         private void CloseButton(object sender, FormClosingEventArgs e)
         {
             tool.Checked = false;
+            menu.Checked = false;
         }
     }
 }

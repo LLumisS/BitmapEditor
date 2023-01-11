@@ -6,10 +6,11 @@ namespace PictureEditor.Forms
 {
     public partial class Brightness : Editor
     {
-        public Brightness(ToolStripButton _tool)
+        public Brightness(ToolStripButton _tool, ToolStripMenuItem _menu)
         {
             InitializeComponent();
             tool = _tool;
+            menu = _menu;
         }
 
         private void OKButton(object sender, EventArgs e)
@@ -45,12 +46,14 @@ namespace PictureEditor.Forms
         private void ExitButton(object sender, EventArgs e)
         {
             tool.Checked = false;
+            menu.Checked = false;
             Hide();
         }
 
         private void CloseButton(object sender, FormClosingEventArgs e)
         {
             tool.Checked = false;
+            menu.Checked = false;
         }
     }
 }

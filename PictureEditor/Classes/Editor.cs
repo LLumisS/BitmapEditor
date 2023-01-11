@@ -22,6 +22,7 @@ namespace PictureEditor.Classes
         static protected int bChange = 0;
 
         protected ToolStripButton tool;
+        protected ToolStripMenuItem menu;
 
         static public void SetImage(PictureBox _pictureBox)
         {

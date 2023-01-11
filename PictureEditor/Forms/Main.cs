@@ -20,9 +20,9 @@ namespace PictureEditor
 
             toolBar = new ToolBar(this);
 
-            brightnessDialog = new Brightness(brightnessTool);
-            contrastDialog = new Contrast(contrastTool);
-            rgbDialog = new RGB(rgbTool);
+            brightnessDialog = new Brightness(brightnessTool, brightnessToolStripMenuItem);
+            contrastDialog = new Contrast(contrastTool, contrastToolStripMenuItem);
+            rgbDialog = new RGB(rgbTool, RGBToolStripMenuItem);
         }
 
         private void Reset()
