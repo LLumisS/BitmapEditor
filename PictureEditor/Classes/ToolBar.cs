@@ -1,5 +1,4 @@
-﻿using PictureEditor.Classes;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 
 namespace PictureEditor
 {
@@ -7,7 +6,7 @@ namespace PictureEditor
     {
         private ToolStripButton previousTool;
         private ToolStripMenuItem previousMenu;
-        private Editor previousDialog;
+        private Form previousDialog;
         private readonly Form parent;
 
         private ToolBar() { }
@@ -21,7 +20,7 @@ namespace PictureEditor
             ToolStripButton tool, 
             ToolStripMenuItem menu, 
             PictureBox pictureBox, 
-            Editor dialog)
+            Form dialog)
         {
             if (pictureBox.Image == null)
             {
@@ -44,7 +43,7 @@ namespace PictureEditor
             SetSubWindowPos(dialog, pictureBox);
         }
 
-        private void SetSubWindowPos(Editor dialog, PictureBox pictureBox)
+        private void SetSubWindowPos(Form dialog, PictureBox pictureBox)
         {
             if (previousDialog != null) previousDialog.Hide();
             previousDialog = dialog;
