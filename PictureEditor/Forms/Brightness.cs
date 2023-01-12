@@ -15,7 +15,7 @@ namespace PictureEditor.Forms
 
         private void OKButton(object sender, EventArgs e)
         {
-            change.bright = trackBar1.Value * 128 / 100;
+            brightChange = trackBar1.Value * 128 / 100;
             ApplyChanges();
         }
 

@@ -14,7 +14,12 @@ namespace PictureEditor.Classes
         static protected PictureBox pictureBox;
         static protected Bitmap source;
 
-        static protected Change change = new Change();
+        static protected int brightChange = 0;
+        static protected int contrastChange = 0;
+
+        static protected int rChange = 0;
+        static protected int gChange = 0;
+        static protected int bChange = 0;
 
         protected ToolStripButton tool;
         protected ToolStripMenuItem menu;
@@ -34,20 +39,14 @@ namespace PictureEditor.Classes
         {
             Bitmap result = new Bitmap(source.Width, source.Height);
 
-            int bright = change.bright;
-            int contrast = change.contrast;
-            int _r = change.r;
-            int _g = change.g;
-            int _b = change.b;
-
             for (int y = 0; y < source.Height; y++)
                 for (int x = 0; x < source.Width; x++)
                 {
                     Color color = source.GetPixel(x, y);
 
-                    byte r = GetByte(operation(color.R, contrast) + bright + _r);
-                    byte g = GetByte(operation(color.G, contrast) + bright + _g);
-                    byte b = GetByte(operation(color.B, contrast) + bright + _b);
+                    byte r = GetByte(operation(color.R, contrastChange) + brightChange + rChange);
+                    byte g = GetByte(operation(color.G, contrastChange) + brightChange + gChange);
+                    byte b = GetByte(operation(color.B, contrastChange) + brightChange + bChange);
 
                     Color resColor = Color.FromArgb(r, g, b);
                     result.SetPixel(x, y, resColor);
