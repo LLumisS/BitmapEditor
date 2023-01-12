@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using System.Drawing;
+using System.Threading.Tasks;
 
 namespace PictureEditor.Classes
 {
@@ -25,12 +26,13 @@ namespace PictureEditor.Classes
             source = (Bitmap)_pictureBox.Image;
         }
 
-        protected byte GetByte(int value)
+        protected byte GetByte(byte srcchan, int br, int cont, int destchan)
         {
+            int value = operation(srcchan, cont) + br + destchan;
             return (byte)Math.Max(0, Math.Min(255, value));
         }
 
-        protected void ApplyChanges()
+        protected async void ApplyChanges()
         {
             Bitmap result = new Bitmap(source.Width, source.Height);
 
@@ -40,18 +42,22 @@ namespace PictureEditor.Classes
             int _g = change.g;
             int _b = change.b;
 
-            for (int y = 0; y < source.Height; y++)
-                for (int x = 0; x < source.Width; x++)
-                {
-                    Color color = source.GetPixel(x, y);
+            await Task.Run( () =>
+            {
+                for (int y = 0; y < source.Height; y++)
+                    for (int x = 0; x < source.Width; x++)
+                    {
+                        Color color = source.GetPixel(x, y);
 
-                    byte r = GetByte(operation(color.R, contrast) + bright + _r);
-                    byte g = GetByte(operation(color.G, contrast) + bright + _g);
-                    byte b = GetByte(operation(color.B, contrast) + bright + _b);
+                        byte r = GetByte(color.R, bright, contrast, _r);
+                        byte g = GetByte(color.G, bright, contrast, _g);
+                        byte b = GetByte(color.B, bright, contrast, _b);
 
-                    Color resColor = Color.FromArgb(r, g, b);
-                    result.SetPixel(x, y, resColor);
-                }
+                        Color resColor = Color.FromArgb(r, g, b);
+                        result.SetPixel(x, y, resColor);
+                    }
+            });
+
             pictureBox.Image = result;
         }
 
