@@ -51,9 +51,9 @@ namespace PictureEditor.Forms
 
         private void OKButton(object sender, EventArgs e)
         {
-            rChange = trackBar1.Value;
-            gChange = trackBar2.Value;
-            bChange = trackBar3.Value;
+            change.r = trackBar1.Value;
+            change.g = trackBar2.Value;
+            change.b = trackBar3.Value;
             ApplyChanges();
         }
 

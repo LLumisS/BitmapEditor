@@ -21,12 +21,12 @@ namespace PictureEditor.Forms
 
         private void OKButton(object sender, EventArgs e)
         {
-            contrastChange = trackBar1.Value;
+            change.contrast = trackBar1.Value;
 
-            if (contrastChange < 0) operation = Negative;
+            if (change.contrast < 0) operation = Negative;
             else operation = Positive;
 
-            contrastChange = Math.Abs(contrastChange);
+            change.contrast = Math.Abs(change.contrast);
 
             ApplyChanges();
         }
