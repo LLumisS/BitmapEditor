@@ -4,7 +4,7 @@ using System.Drawing;
 
 namespace PictureEditor.Classes
 {
-    public class Editor : Form
+    public abstract class Editor : Form
     {
         static private int def(byte a, int b) => a;
 
@@ -54,6 +54,6 @@ namespace PictureEditor.Classes
             pictureBox.Image = result;
         }
 
-        public virtual void Reset() { }
+        public abstract void Reset();
     }
 }

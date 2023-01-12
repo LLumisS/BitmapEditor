@@ -38,7 +38,11 @@ namespace PictureEditor.Forms
 
         public override void Reset()
         {
+            tool.Checked = false;
+            menu.Checked = false;
+
             Hide();
+
             trackBar1.Value = 0;
             textBox1.Text = "0";
         }
