@@ -50,9 +50,7 @@ namespace BitmapEditor.Forms
 
         public override void Reset()
         {
-            tool.Checked = false;
-            menu.Checked = false;
-
+            Uncheck();
             Hide();
 
             trackBar1.Value = 0;
@@ -61,15 +59,13 @@ namespace BitmapEditor.Forms
 
         private void ExitButton(object sender, EventArgs e)
         {
-            tool.Checked = false;
-            menu.Checked = false;
+            Uncheck();
             Hide();
         }
 
         private void CloseButton(object sender, FormClosingEventArgs e)
         {
-            tool.Checked = false;
-            menu.Checked = false;
+            Uncheck();
         }
     }
 }

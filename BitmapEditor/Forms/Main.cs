@@ -23,6 +23,8 @@ namespace BitmapEditor
             brightnessDialog = new Brightness(brightnessTool, brightnessToolStripMenuItem);
             contrastDialog = new Contrast(contrastTool, contrastToolStripMenuItem);
             rgbDialog = new RGB(rgbTool, RGBToolStripMenuItem);
+
+            Editor.SetPictureBox(pictureBox1);
         }
 
         private void Reset()
@@ -35,7 +37,7 @@ namespace BitmapEditor
         private void OpenButton(object sender, EventArgs e)
         {
             files.OnOpen(openFileDialog, pictureBox1);
-            Editor.SetImage(pictureBox1);
+            Editor.SetSource(pictureBox1.Image);
             Reset();
         }
 

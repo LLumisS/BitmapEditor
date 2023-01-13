@@ -20,10 +20,14 @@ namespace BitmapEditor.Classes
         protected ToolStripButton tool;
         protected ToolStripMenuItem menu;
 
-        static public void SetImage(PictureBox _pictureBox)
+        static public void SetPictureBox(PictureBox _pictureBox)
         {
             pictureBox = _pictureBox;
-            source = (Bitmap)_pictureBox.Image;
+        }
+
+        static public void SetSource(Image image)
+        {
+            source = (Bitmap)image;
         }
 
         protected byte GetByte(byte srcchan, int br, int cont, int destchan)
@@ -59,6 +63,12 @@ namespace BitmapEditor.Classes
             });
 
             pictureBox.Image = result;
+        }
+
+        protected void Uncheck()
+        {
+            tool.Checked = false;
+            menu.Checked = false;
         }
 
         public abstract void Reset();
