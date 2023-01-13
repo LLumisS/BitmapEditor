@@ -51,9 +51,9 @@ namespace BitmapEditor.Forms
 
         private void OKButton(object sender, EventArgs e)
         {
-            change.r = trackBar1.Value;
-            change.g = trackBar2.Value;
-            change.b = trackBar3.Value;
+            changes.r = trackBar1.Value;
+            changes.g = trackBar2.Value;
+            changes.b = trackBar3.Value;
             ApplyChanges();
         }
 

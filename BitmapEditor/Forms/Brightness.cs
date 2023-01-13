@@ -15,7 +15,7 @@ namespace BitmapEditor.Forms
 
         private void OKButton(object sender, EventArgs e)
         {
-            change.bright = trackBar1.Value * 128 / 100;
+            changes.bright = trackBar1.Value * 128 / 100;
             ApplyChanges();
         }
 

@@ -26,7 +26,7 @@ namespace BitmapEditor.Forms
             if (contrast < 0) operation = Negative;
             else operation = Positive;
 
-            change.contrast = Math.Abs(contrast);
+            changes.contrast = Math.Abs(contrast);
 
             ApplyChanges();
         }

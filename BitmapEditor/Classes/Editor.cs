@@ -15,7 +15,7 @@ namespace BitmapEditor.Classes
         static protected PictureBox pictureBox;
         static protected Bitmap source;
 
-        static protected Change change = new Change();
+        static protected Change changes;
 
         protected ToolStripButton tool;
         protected ToolStripMenuItem menu;
@@ -40,11 +40,11 @@ namespace BitmapEditor.Classes
         {
             Bitmap result = new Bitmap(source.Width, source.Height);
 
-            int bright = change.bright;
-            int contrast = change.contrast;
-            int _r = change.r;
-            int _g = change.g;
-            int _b = change.b;
+            int bright = changes.bright;
+            int contrast = changes.contrast;
+            int _r = changes.r;
+            int _g = changes.g;
+            int _b = changes.b;
 
             await Task.Run( () =>
             {
