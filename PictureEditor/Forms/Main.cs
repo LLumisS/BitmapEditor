@@ -54,7 +54,8 @@ namespace PictureEditor
             toolBar.Start(
                 brightnessTool, 
                 brightnessToolStripMenuItem, 
-                pictureBox1, brightnessDialog);
+                pictureBox1, 
+                brightnessDialog);
         }
 
         private void ContrastToolButton(object sender, EventArgs e)
