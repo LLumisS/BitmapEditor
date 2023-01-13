@@ -1,10 +1,11 @@
 ﻿using System.Drawing;
 using System.Windows.Forms;
 using System.IO;
+using BitmapEditor.Classes;
 
 namespace BitmapEditor
 {
-    internal class Files
+    internal class Files : ErrorMsg
     {
         private string filePath;
 
@@ -24,11 +25,7 @@ namespace BitmapEditor
                 }
                 catch
                 {
-                    MessageBox.Show(
-                        "This picture is too big.",
-                        "Error",
-                        MessageBoxButtons.OK,
-                        MessageBoxIcon.Error);
+                    Error("Can not open this file");
                 }
             }
         }
@@ -36,11 +33,7 @@ namespace BitmapEditor
         public void OnSave(PictureBox pictureBox)
         {
             if (pictureBox.Image != null) pictureBox.Image.Save(filePath);
-            else MessageBox.Show(
-                "Please select a picture firstly.",
-                "Error",
-                MessageBoxButtons.OK,
-                MessageBoxIcon.Error);
+            else Error("Please select a picture firstly");
         }
 
         public void OnSaveAs(PictureBox pictureBox)
@@ -56,11 +49,7 @@ namespace BitmapEditor
                     pictureBox.Image.Save(save.FileName);
                 }
             }
-            else MessageBox.Show(
-                "Please select a picture firstly.", 
-                "Error", 
-                MessageBoxButtons.OK, 
-                MessageBoxIcon.Error);
+            else Error("Please select a picture firstly");
         }
     }
 }

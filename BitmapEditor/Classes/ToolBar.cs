@@ -1,9 +1,9 @@
-﻿using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+﻿using BitmapEditor.Classes;
+using System.Windows.Forms;
 
 namespace BitmapEditor
 {
-    internal class ToolBar
+    internal class ToolBar : ErrorMsg
     {
         private ToolStripButton previousTool;
         private ToolStripMenuItem previousMenu;
@@ -26,11 +26,7 @@ namespace BitmapEditor
             if (pictureBox.Image == null)
             {
                 tool.Checked = false;
-                MessageBox.Show(
-                    "Please select a picture firstly.",
-                    "Error",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Error);
+                Error("Please select a picture firstly");
                 return;
             }
 
