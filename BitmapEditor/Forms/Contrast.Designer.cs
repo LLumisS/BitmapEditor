@@ -1,4 +1,4 @@
-﻿namespace PictureEditor.Forms
+﻿namespace BitmapEditor.Forms
 {
     partial class Contrast
     {

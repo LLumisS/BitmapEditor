@@ -1,6 +1,6 @@
 ﻿using System.Windows.Forms;
 
-namespace PictureEditor
+namespace BitmapEditor
 {
     internal class ToolBar
     {

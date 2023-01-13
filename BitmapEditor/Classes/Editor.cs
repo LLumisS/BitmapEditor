@@ -3,7 +3,7 @@ using System.Windows.Forms;
 using System.Drawing;
 using System.Threading.Tasks;
 
-namespace PictureEditor.Classes
+namespace BitmapEditor.Classes
 {
     public abstract class Editor : Form
     {

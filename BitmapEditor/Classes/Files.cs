@@ -2,7 +2,7 @@
 using System.Windows.Forms;
 using System.IO;
 
-namespace PictureEditor
+namespace BitmapEditor
 {
     internal class Files
     {

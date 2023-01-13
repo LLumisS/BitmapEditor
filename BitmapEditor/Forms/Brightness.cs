@@ -1,8 +1,8 @@
-﻿using PictureEditor.Classes;
+﻿using BitmapEditor.Classes;
 using System;
 using System.Windows.Forms;
 
-namespace PictureEditor.Forms
+namespace BitmapEditor.Forms
 {
     public partial class Brightness : Editor
     {

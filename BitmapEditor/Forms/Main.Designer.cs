@@ -1,4 +1,4 @@
-﻿namespace PictureEditor
+﻿namespace BitmapEditor
 {
     partial class Main
     {

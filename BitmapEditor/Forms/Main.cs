@@ -1,9 +1,9 @@
-﻿using PictureEditor.Forms;
-using PictureEditor.Classes;
+﻿using BitmapEditor.Forms;
+using BitmapEditor.Classes;
 using System;
 using System.Windows.Forms;
 
-namespace PictureEditor
+namespace BitmapEditor
 {
     public partial class Main : Form
     {

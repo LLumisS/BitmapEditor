@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace PictureEditor.Properties
+namespace BitmapEditor.Properties
 {
 
 

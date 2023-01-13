@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace PictureEditor.Forms
+namespace BitmapEditor.Forms
 {
     partial class RGB
     {
