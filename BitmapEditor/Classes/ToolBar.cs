@@ -1,4 +1,5 @@
 ﻿using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace BitmapEditor
 {
@@ -32,14 +33,8 @@ namespace BitmapEditor
                     MessageBoxIcon.Error);
                 return;
             }
-            if (previousTool != null) previousTool.Checked = false;
-            previousTool = tool;
-            tool.Checked = true;
 
-            if (previousMenu != null) previousMenu.Checked = false;
-            previousMenu = menu;
-            menu.Checked = true;
-            
+            UncheckPrevious(tool, menu);
             SetSubWindowPos(dialog, pictureBox);
         }
 
@@ -54,6 +49,17 @@ namespace BitmapEditor
             const int indent = 5;
             dialog.Left = parent.Left + parent.Width + indent;
             dialog.Top = parent.Top;
+        }
+
+        private void UncheckPrevious(ToolStripButton tool, ToolStripMenuItem menu)
+        {
+            if (previousTool != null) previousTool.Checked = false;
+            previousTool = tool;
+            tool.Checked = true;
+
+            if (previousMenu != null) previousMenu.Checked = false;
+            previousMenu = menu;
+            menu.Checked = true;
         }
     }
 }
