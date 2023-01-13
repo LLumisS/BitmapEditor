@@ -8,13 +8,12 @@ namespace BitmapEditor.Classes
     public abstract class Editor : Form
     {
         static private int def(byte a, int b) => a;
-
         protected delegate int Operation(byte a, int b);
         static protected Operation operation = def;
 
         static protected PictureBox pictureBox;
-        static protected Bitmap source;
 
+        static protected Bitmap source;
         static protected Change changes;
 
         protected ToolStripButton tool;
